@@ -317,9 +317,7 @@ $sbc_settings = get_option("sbc-settings");
 if($sbc_settings['sbc_style'] === '1'){
 	// Add our styling
 	function style_insert() {
-		$current_path = get_option('siteurl').'/wp-content/plugins/'.basename(dirname(__FILE__));
-		
-		echo "<link href='{$current_path}/sbc-style.css' type='text/css' rel='stylesheet' />";
+		echo "<link href='".plugins_url( 'sbc-style.css', __FILE__ )."' type='text/css' rel='stylesheet' />";
 	}
 
 	// insert custom stylesheet
